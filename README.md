@@ -13,6 +13,7 @@ To authorize an EC2 instance to retrieve secrets from AWS Secrets Manager, you n
     "Version": "2012-10-17",
     "Statement": [
         {
+            "Sid": "SecretHere",
             "Effect": "Allow",
             "Action": "secretsmanager:GetSecretValue",
             "Resource": "arn:aws:secretsmanager:<region>:<account-id>:secret:prod/cart-service/credentials-*"
