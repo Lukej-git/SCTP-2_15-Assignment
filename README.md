@@ -20,11 +20,11 @@ To authorize an EC2 instance to retrieve secrets from AWS Secrets Manager, you n
     ]
 }
 ```
-Replace '<region>' and '<account-id>' with your AWS region and account ID.
+Replace `<region>` and `<account-id>` with your AWS region and account ID.
 
 ## 2a. Using the secret name prod/cart-service/credentials, derive a sensible ARN as the specific resource for access.
 
 ```
 arn:aws:secretsmanager:<region>:<account-id>:secret:prod/cart-service/credentials-*
 ```
-The wildcard ('-*') at the end ensures access to the secret and its versions, as AWS Secrets Manager appends a random suffix to secret ARNs.
+The wildcard (`-*`) at the end ensures access to the secret and its versions, as AWS Secrets Manager appends a random suffix to secret ARNs.
